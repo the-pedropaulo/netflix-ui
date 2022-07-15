@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef, useLayoutEffect } from "react";
+import React, { useState, useLayoutEffect } from "react";
 import styles from "./styles.module.scss";
-import router from "next/router";
 import Image from 'next/image'
 import DensityMediumIcon from '@mui/icons-material/DensityMedium';
+import Link from "next/link";
 
 // type Color = "white" | "rgba(255, 255, 255, 0.85)";
 // type Position = "absolute" | "relative";
@@ -47,34 +47,34 @@ export default function Header({
         style={{ background: color, position: position }}
       >
         <div className={styles.headerLogo}>
-          <a href="/">
+          <Link href="/">
             <Image src="/NetflixLogoSvg.png" alt="Vercel Logo" width={111} height={30} />
-          </a>
+          </Link>
 
           <div className={styles.headerSections}>
             <div>
               <p>
-                <a href="/#about">Home</a>
+                <Link>Home</Link>
               </p>
             </div>
             <div>
               <p>
-                <a href="/#how-it-works">Séries</a>
+                <Link>Séries</Link>
               </p>
             </div>
             <div>
               <p>
-                <a href="/faq">Filmes</a>
+                <Link>Filmes</Link>
               </p>
             </div>
             <div>
               <p>
-                <a href="/blog">Bombando</a>
+                <Link>Bombando</Link>
               </p>
             </div>
             <div>
               <p>
-                <a href="/#form">Minha lista</a>
+                <Link>Minha lista</Link>
               </p>
             </div>
           </div>
@@ -88,22 +88,22 @@ export default function Header({
           </div>
           <div>
             <p>
-              <a>Pedro</a>
+              <Link>Pedro</Link>
             </p>
           </div>
           <div>
             <Image src="/NotificationBell.png" alt="Vercel Logo" width={20} height={20} />
           </div>
           <div className={styles.item} >
-            <img
+            <Image
               src="https://images.pexels.com/photos/941693/pexels-photo-941693.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
               alt=""
               className={styles.avatar}
             />
             <div className={styles.dropdownContent}>
-              <a>Meus dados</a>
-              <a >Dependentes</a>
-              <a>Sair</a>
+              <Link>Meus dados</Link>
+              <Link >Dependentes</Link>
+              <Link>Sair</Link>
             </div>
           </div>
         </div>
@@ -116,9 +116,9 @@ export default function Header({
         style={{ background: color, position: position }}
       >
         <div className={styles.headerLogo}>
-          <a href="/">
-            <img src="/NetflixLogoSvg.png" />
-          </a>
+          <Link href="/">
+            <Image src="/NetflixLogoSvg.png" />
+          </Link>
         </div>
 
         <div className={styles.headerButtons}>
@@ -130,10 +130,10 @@ export default function Header({
             {useMobileModal && (
             <div className={styles.burger_box} >
               <div className={styles.dropdownContent}>
-                <a>Filmes</a>
-                <a>Séries</a>
-                <a>Bombando</a>
-                <a>Originais BseenFlix</a>
+                <Link>Filmes</Link>
+                <Link>Séries</Link>
+                <Link>Bombando</Link>
+                <Link>Originais BseenFlix</Link>
               </div>
             </div>
             )}
@@ -142,15 +142,15 @@ export default function Header({
             <Image src="/NotificationBell.png" alt="Vercel Logo" width={20} height={20} />
           </div>
           <div className={styles.item} >
-            <img
+            <Image
               src="https://images.pexels.com/photos/941693/pexels-photo-941693.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
               alt=""
               className={styles.avatar}
             />
             <div className={styles.dropdownContent}>
-              <a>Meus dados</a>
-              <a >Dependentes</a>
-              <a>Sair</a>
+              <Link>Meus dados</Link>
+              <Link>Dependentes</Link>
+              <Link>Sair</Link>
             </div>
           </div>
         </div>
