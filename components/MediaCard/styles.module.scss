@@ -1,0 +1,29 @@
+.grid_btns {
+    display: flex;
+    justify-content: space-between;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 28px;
+    color: black;
+    width: 100%;
+
+    >div:first-child {
+        display: flex;
+        gap: 1rem;
+    }
+
+    >div:last-child {
+        justify-content: end;
+    }
+
+    .btn {
+      background-color: white;
+      border: 2px solid white;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      border-radius: 50%;
+    }
+  }
